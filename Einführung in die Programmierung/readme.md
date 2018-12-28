@@ -9,3 +9,8 @@ PDFs do not go well with git tracking, as every little update to the tex would r
 
 
 If you push and continuously update a PDF to this repo, when you go to sleep, I'll be under your bed.
+
+
+
+
+*Edit: Yes I'm aware that there's a .png included at the moment, but until I manage to turn that shoddy sketch into a tikz-drawing, it'll have to remain a necessary evil. Plus, the contents of it should never change.*
