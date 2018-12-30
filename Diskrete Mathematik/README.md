@@ -7,4 +7,4 @@ If you aren't able to access the repo, feel free to contact me so I can invite y
 The repo contains:
 
 - Solutions to weekly homework.
-- A summary (6 pages long) that is still undergoing big changes.
+- A summary (6 pages long) that is still undergoing big changes. -> added a lot of examples from old exams, since Prof. Maurer likes to "recycle" old exam questions.
