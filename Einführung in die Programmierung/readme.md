@@ -1,7 +1,9 @@
-This repo contains two files:
+This repo contains four files:
 
 - [DavidBohner/Zusammenfassungen/Eprog](https://github.com/DavidBohner/Zusammenfassungen/tree/master/EProg)
 - [Java_Exception__Errors_etc_explained.pdf](https://github.com/ModumUnlimited/StudyMaterials/blob/master/Einf%C3%BChrung%20in%20die%20Programmierung/Java_Exception__Errors_etc_explained.pdf)
+- [JUnit.md](https://github.com/ModumUnlimited/StudyMaterials/blob/master/Einf%C3%BChrung%20in%20die%20Programmierung/JUnit.md): A small JUnit summary.
+- [Java Quirks](https://github.com/ModumUnlimited/StudyMaterials/blob/master/Einf%C3%BChrung%20in%20die%20Programmierung/Java_Quirks.md): A summary highlighting some weird features and design choices made by the Java developers. 
 
 
 ## DavidBohner/Zusammenfassungen/Eprog
