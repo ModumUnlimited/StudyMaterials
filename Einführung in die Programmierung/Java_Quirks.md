@@ -75,7 +75,7 @@ For `||`, Java will escape as soon as one of them is `true`, returning an overal
 if((a/b > 0) && (b != 0)) {}
 ```
 
-In the above code, should `b` be 0, the program will encounter an ArithmeticException due to a div by 0 (unless `a` is a double, in which case we'd compare infinity>0 - another of java's quirks).
+In the above code, should `b` be 0, the program will encounter an ArithmeticException due to a div by 0 (unless `a` is a double, in which case we'd compare `infinity > 0` - another of java's quirks).
 
 ```java
 if((b != 0) && (a/b > 0)) {}
