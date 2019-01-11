@@ -128,7 +128,7 @@ In this code, all static types are of `B`, therefore no calls with `System.out.p
 
 Simply changing the above code to
 
-```
+```java
 ...
 C c = new C();
 B b = new B();
@@ -142,7 +142,7 @@ would change the output to
 
 Note that changing it to
 
-```
+```java
 C c = new C();
 B b = c;
 ```
