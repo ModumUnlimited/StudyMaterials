@@ -4,5 +4,10 @@ As a result, this repo provides you with a PDF composed of flashcards (which I w
 
 Your contributions are very welcome. Feel free to add information to these flashcards. The more stuff we add, the better the flashcards are.
 
+## Screenshot
+Since this will probably change I haven't included a precompiled PDF but opted for a screenshot so you get an idea how these flashcards look like.
+
+The following is a terrible and not to scale screenshot. On the left side is part of the front of the paper, on the right side is a part of the back of the paper.
+![terrible screenshow](./terrible_screenshot.PNG)
 
 Template configuration file from [https://github.com/figgis/japanese-flashcards/blob/master/avery5371.cfg](https://github.com/figgis/japanese-flashcards/blob/master/avery5371.cfg)
