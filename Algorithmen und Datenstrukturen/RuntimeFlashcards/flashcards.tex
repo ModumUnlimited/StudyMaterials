@@ -1,0 +1,156 @@
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage[dvipsnames,usenames, table]{xcolor} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}\usepackage{amsfonts}
+\usepackage{amsmath}
+\cardfrontstyle[\large\slshape]{headings}
+\cardbackstyle{empty}
+%BEGIN LISTINGDEF
+\usepackage{listings}
+
+\usepackage{hyperref}
+
+
+\renewcommand{\ttdefault}{pcr}
+
+\definecolor{listing-background}{rgb}{0.97,0.97,0.97}
+\definecolor{listing-rule}{HTML}{B3B2B3}
+\definecolor{listing-numbers}{HTML}{B3B2B3}
+\definecolor{listing-text-color}{HTML}{000000}
+\definecolor{listing-keyword}{HTML}{435489}
+\definecolor{listing-identifier}{HTML}{435489}
+\definecolor{listing-string}{HTML}{00999a}
+\definecolor{listing-comment}{HTML}{8e8e8e}
+\definecolor{listing-javadoc-comment}{HTML}{006CA9}
+
+\lstdefinestyle{eisvogellistingstyle}{
+	language=java,
+	numbers=none,
+	backgroundcolor=\color{listing-background},
+	basicstyle=\color{listing-text-color}\footnotesize\ttfamily{}, % print whole listing small
+	xleftmargin=0.8em, % 2.8 with line numbers
+	breaklines=true,
+	frame=single,
+	framesep=0.6mm,
+	rulecolor=\color{listing-rule},
+	frameround=ffff,
+	framexleftmargin=0.4em, % 2.4 with line numbers | 0.4 without them
+	tabsize=4, %width of tabs
+	numberstyle=\color{listing-numbers},
+	aboveskip=1.0em,
+	keywordstyle=\color{listing-keyword}\bfseries, % underlined bold black keywords
+	classoffset=0,
+	sensitive=true,
+	identifierstyle=\color{listing-identifier}, % nothing happens
+	commentstyle=\color{listing-comment}, % white comments
+	morecomment=[s][\color{listing-javadoc-comment}]{/**}{*/},
+	stringstyle=\color{listing-string}, % typewriter type for strings
+	showstringspaces=false, % no special string spaces
+	escapeinside={/*@}{@*/}, % for comments
+}
+\lstset{style=eisvogellistingstyle}
+%END LISTINGDEF
+
+\begin{document}
+\footnotesize
+
+
+%    to use code use the template below!
+%\begin{lstlisting}[language=Java]
+%Random randomGenerator = new Random();
+%int rand = randomGenerator.nextInt(bound);
+%\end{lstlisting}
+%
+
+
+
+\begin{flashcard}[A\&D]{Adjazenzliste vs. Matrix \\{\small \begin{itemize}
+\item Speicher
+\item Alle Nachbarn von $v \in V$
+\item Ist $(u,v)\in E$?
+\item Kante einfügen
+\item Kante löschen    
+\end{itemize}}}
+\vspace*{\stretch{1}}
+    \begin{tabular}{| c | c | c |}
+        \textsc{Operation} & \textsc{Adj. Matrix} & \textsc{Adj. Liste}  \\ \hline
+        Speicher &$\mathcal{O}(|V|^2)$ & $\mathcal{O}(|V| + |E|)$ \\ 
+        Alle Nachbarn von $v \in V$ & $\mathcal{O}(|V|)$ & $\mathcal{O}(deg^{+}(v))$ \\
+        Ist $(u,v)\in E$? & $\mathcal{O}(1)$ &$\mathcal{O}(deg^{+}(v))$ \\
+        Kante einfügen &  $\mathcal{O}(1)$ & $\mathcal{O}(deg^{+}(v))$\\
+        Kante löschen & $\mathcal{O}(1)$  &  $\mathcal{O}(deg^{+}(v))$
+    \end{tabular}
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+
+
+
+
+
+\begin{flashcard}[A\&D]{Tiefensuche}
+    \vspace*{\stretch{1}}
+        Wir besuchen bei der Tiefensuche jeden Knoten. Somit sicherlich ${\Theta}(|V|)$. Für jeden Knoten fügen wir ${\Theta}(deg^{+}(v))$ Kanten hinzu für welche wir prüfen ob schon besucht wurden in konstanter Zeit.
+        \par 
+        Somit ${\Theta}(|V| + \sum_{v\in V} (deg^{+}(v) + c) ) = {\Theta}(|V| + |E|)$.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+\begin{flashcard}[A\&D]{Breitensuche}
+    \vspace*{\stretch{1}}
+        Wir besuchen bei der Breitensuche jeden Knoten. Somit sicherlich ${\Theta}(|V|)$. Für jeden Knoten fügen wir ${\Theta}(deg^{+}(v))$ Kanten hinzu für welche wir prüfen ob schon besucht wurden in konstanter Zeit.
+        \par 
+        Somit ${\Theta}(|V| + \sum_{v\in V} (deg^{+}(v) + c) ) = {\Theta}(|V| + |E|)$.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+
+
+\begin{flashcard}[A\&D]{Dijkstra \\  {\small mit MinHeap (da Fib. Heap sehr kompliziert)}}
+    \vspace*{\stretch{1}}
+    Initialisiere alle Distanzen in leerem Array in $\Theta(|V|)$.
+    Nun gehen in \textsc{while} Schleife die solange läuft bis alle Knoten abgearbeitet sind $\Theta(|V|)$. In jedem Schleifendurchgang werden vom zum entfernenden Knoten alle ausgehenden Kanten angeschaut und im schlimmsten Fall werden entweder \textsc{DecreaseKey} oder \textsc{Insert} für den Endknoten der Kante aufgerufen.
+    Da wir ja einen Knoten entfernt haben müssen wir mit \textsc{Rebalance} den Heap wiederherstellen. Somit rufen wir total $|E|$ mal \textsc{Rebalance} auf und $|V|$ mal \textsc{DecreaseKey} oder \textsc{Insert}. In einem \href{https://github.com/ModumUnlimited/DavesAlgorithmCollection/blob/master/datastructures/DecreaseKeyMinHeap.java}{modifiziertem MinHeap} haben alle diese Funktionen eine Laufzeit von $\mathcal{O}(log(|V|))$
+
+
+    Somit ${\Theta}(|V| + |V|\log|V| + |E|\log|V|) = {\Theta}((|V|+ |E|)\log |V|)$ mit Minheap und ${\Theta(|V|\log(|V|)+|E|)}$ mit Fib. Heap.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+
+
+
+
+
+\begin{flashcard}[A\&D]{Bellman-Ford}
+    \vspace*{\stretch{1}}
+    Wir ein Array der Grösse $|V|$ in insgesamt $|V|-1$ Durchgängen schauen wir für alle $e\in E$ ob wir den Distanzwert des Ziels verringern können. Somit ist die Laufzeit $\Theta(|V||E|)$
+    \vspace{0.5cm}
+    Alternativ nach Skript: Wir haben eine $|V|^2$ Tabelle und jeder Eintrag hängt von $|V|$ Vorgänger ab. Dann ist $\Theta(|V^3|)$.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+\begin{flashcard}[A\&D]{Floyd-Warshall}
+    \vspace*{\stretch{1}}
+Initialisiere $|V|^2$ Tabelle, trage $\infty$ ein wo es keine Kante gibt und Kantengewicht wo es Kanten gibt. Nun "relaxiere" $|V|$ mal. Das gibt total $\Theta(V^3)$. 
+\par Super video: \href{https://youtu.be/I1kA7c09lZE}{https://youtu.be/I1kA7c09lZE}.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+\begin{flashcard}[A\&D]{Johnson's Algorithm}
+    \vspace*{\stretch{1}}
+    \begin{itemize}
+        \item Füge Knoten $v_{new}$ hinzu und verbinde mit allen anderen mit Kantengewicht 0. $\mathcal{O}(|V|)$
+        \item Starte Bellman-Ford von $v_{new}$ $\mathcal{O}(|V||E|)$
+        \item Transformiere Kantengewichte mit ${c'}_e = c_e + p_u - p_v $ für alle $(u,v)\in E$,  $\mathcal{O}(|V|)$
+        \item Führe nun für jeden Knoten Dijkstra aus: \\$\mathcal{O}(|V|(|E| + |V|)\log(|V|))$
+    \end{itemize}
+    Totale Laufzeit somit: ${\Theta}(|V|(|E| + |V|)\log(|V|))$ mit MinHeap.\\
+    Oder ${\Theta(|V|^{2}\log |V|+|V||E|)}$ mit Fibonacci Heap.
+\par Super video: \href{https://youtu.be/xc2ua8sQAoE}{https://youtu.be/xc2ua8sQAoE}.
+    \vspace*{\stretch{1}}
+\end{flashcard}
+
+
+\end{document}
