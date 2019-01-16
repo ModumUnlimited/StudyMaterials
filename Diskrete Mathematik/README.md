@@ -1,3 +1,6 @@
+In this repo you can find a summary.pdf file which is the summary I will take to the exam (will copy it by hand). Feel free to take a look at it.
+
+
 Since Prof. Maurer doesn't like to see his materials on the internet you can find a link to a private repo below: (its not ideal but I dont want to get any copyright problems).
 
 [https://github.com/davidrzs/Discrete-Mathematics-Summary](https://github.com/davidrzs/Discrete-Mathematics-Summary)
