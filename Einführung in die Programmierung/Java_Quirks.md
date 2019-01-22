@@ -120,7 +120,7 @@ public class C extends B {
 
 `B1 C1 C1`
 
-*Example shamelessly stolen from Mickey V‰nsk‰'s practice slides (Week 11)*
+*Example shamelessly stolen from Mickey V√§nsk√§'s practice slides (Week 11)*
 
 The reason for this output is that **while methods resolve on the static type of the argument, they resolve on the dynamic type of the receiver**.
 
@@ -149,4 +149,4 @@ B b = c;
 
 would result in
 
-`C2 C1`
+`C2 C1 C2`
