@@ -1,0 +1,104 @@
+Test ran on 8 cores 
+ 
+----------------------------
+Array of size: 10
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 20
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 40
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 80
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 160
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 320
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 640
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 16 ms 
+----------------------------
+Array of size: 1280
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 2560
+ 
+BubbleSort took 0 ms 
+Sequencial mergesort took 16 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 5120
+ 
+BubbleSort took 31 ms 
+Sequencial mergesort took 0 ms 
+Parallel mergesort took 16 ms 
+----------------------------
+Array of size: 10240
+ 
+BubbleSort took 140 ms 
+Sequencial mergesort took 16 ms 
+Parallel mergesort took 0 ms 
+----------------------------
+Array of size: 20480
+ 
+BubbleSort took 593 ms 
+Sequencial mergesort took 47 ms 
+Parallel mergesort took 16 ms 
+----------------------------
+Array of size: 40960
+ 
+BubbleSort took 2374 ms 
+Sequencial mergesort took 141 ms 
+Parallel mergesort took 94 ms 
+----------------------------
+Array of size: 81920
+ 
+BubbleSort took 9672 ms 
+Sequencial mergesort took 562 ms 
+Parallel mergesort took 453 ms 
+----------------------------
+Array of size: 163840
+ 
+BubbleSort took 38504 ms 
+Sequencial mergesort took 2280 ms 
+Parallel mergesort took 1815 ms 
+----------------------------
+Array of size: 327680
+ 
+BubbleSort omitted! 
+Sequencial mergesort took 10735 ms 
+Parallel mergesort took 7858 ms 
+----------------------------
+Array of size: 655360
+ 
+BubbleSort omitted! 
+Sequencial mergesort took 37165 ms 
+Parallel mergesort took 27844 ms 
